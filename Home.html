@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Inicio</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: black;
+      color: white
+    }
+
+    .main-container {
+      width:100%;
+      height: auto;
+      border-bottom: 7px solid darkblue; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
+  padding-bottom: 10px;
+    }
+
+   
+    .sobre-nosotros{
+      border-bottom: 7px solid darkblue; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
+  padding-bottom: 10px;
+  padding: 25px;
+  font-size: large;
+  
+    }
+.colabora{
+  color: white;
+  background-image: url("conceptos-imagenes/space-bg.jpg");
+  object-fit: cover;
+  font-size: large;
+  padding: 25px;
+}
+
+
+    .chatbot{
+    border-bottom: 7px solid darkblue; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
+  padding-bottom: 10px;
+  background-color: white;
+  color:black;
+  padding: 25px;
+  font-size: large;
+    }
+
+    .chatbot img{
+      border-radius: 50px;
+    }
+
+    /* Estilos del botón */
+#scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#scrollTopButton:hover {
+    background-color: #0056b3;
+}
+
+
+    /* Desktop Navbar */
+    .navbar-desktop {
+      background-color: var(--white);
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px; 
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .nav-items-desktop {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-items-desktop a {
+      text-decoration: none;
+      color: var(--black);
+      margin-right: 12px;
+      font-size: var(--sm);
+    }
+
+    /* Mobile Menu */
+    .navbar-mobile {
+      display: none;
+    }
+
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background-color: var(--white);
+      padding: 24px;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-menu ul li {
+      margin-bottom: 16px;
+    }
+
+    .mobile-menu ul li a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+      font-size: var(--sm);
+    }
+
+    /* Mobile Menu Open */
+    .menu-open {
+      overflow: hidden;
+    }
+
+    .menu-open .navbar-mobile {
+      width: 250px;
+    }
+
+    .menu-open .mobile-menu {
+      transform: translateX(0);
+    }
+
+    /* Logo in Mobile Menu */
+    .mobile-menu-logo {
+      margin-top: auto;
+      width: 40px;
+      height: 40px;
+      align-self: flex-start;
+    }
+
+    /* Centered Content */
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 0;
+      color:white;
+      
+    }
+
+      .introduction {
+        position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (para videos en HD) */
+    overflow: hidden;
+        
+        
+     }
+
+    .introduction video{
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    }
+
+    .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  
+}
+
+.social-icon img {
+  width: 24px; 
+  height: 24px; 
+  margin: 20px;
+  transition: opacity 0.3s;
+  
+}
+
+.social-icon img:hover {
+  opacity: 0.7; /* Opacidad al pasar el cursor sobre los iconos, ajusta según tus preferencias */
+}
+
+    /* ... Código CSS anterior ... */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  width: 240px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: white;
+}
+
+.product-info div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2) {
+  font-size: var(--sm);
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--very-light-pink);
+}
+
+.product-info figure {
+  margin: 0;
+}
+
+.product-info figure img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Estilos al pasar el ratón sobre las tarjetas */
+
+.product-card:hover img {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.cursos{
+  margin-top:50px;
+}
+
+.resumen{
+  background-color: white;
+  color: black;
+  font-size: large;
+  padding: 25px;
+  margin-top: 10px;
+  
+}
+
+.resumen h1 {
+  color:  black;
+  font-weight: bolder;
+}
+
+.resumen img  {
+  border-radius: 20px;
+}
+
+.intro-text{
+  display: none;
+}
+
+.sobre-nosotros img{
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+/* Estilos para dispositivos móviles */
+
+.social-media img {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.pagar-button {
+            margin-top: 30px;
+            width:90px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            
+
+        }
+
+        .pagar-button:hover {
+  transform: scale(1.1); /* Al pasar el cursor, aumentamos el tamaño del botón en un 10% */
+}
+
+
+
+@media screen and (max-width: 650px) 
+
+{
+
+
+  .introduction video {
+        height: 800px;
+        width: 100%; /* Altura específica para dispositivos móviles */
+      }
+
+      .video-text {
+        display: none;
+      }
+
+      
+
+      
+
+      .cursos{
+        margin-top: 40px;
+      }
+
+      
+
+        .navbar-desktop {
+                display: none;
+            }
+        
+            .navbar-mobile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: white;
+                height: 60px;
+                padding: 0 12px;
+                border-bottom: 1px solid var(--very-light-pink);
+            }
+        
+            .menu-icon {
+                display: block;
+            }
+        
+            .mobile-menu {
+                display: block;
+            }
+
+  
+}
+
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del menú desplegable al hacer clic */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+     }
+   
+
+    .centered-content img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      margin-top: 15px;
+      
+    }
+
+    .centered-content p {
+      padding-left: 7%;
+      padding-right: 7%;
+      text-align: justify;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      /* Transiciones para animar el texto */
+      opacity: 0; /* Comenzamos con opacidad 0 para que el texto esté oculto */
+      animation: fadeIn 2s forwards; /* Animación de 2 segundos para mostrar el texto */
+    }
+
+    /* Animación para el fade-in del texto */
+    @keyframes fadeIn {
+      to {
+        opacity: 1; /* Opacidad 1 para que el texto se muestre completamente */
+      }
+    }
+
+    
+    
+
+    
+    
+        
+  </style>
+</head>
+
+<body>
+  <!-- Desktop Navbar -->
+  <nav class="navbar-desktop">
+    <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
+    <div class="nav-items-desktop">
+      <a href="Home.html">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="proyectos.html">Proyectos</a>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Colaborar </a>
+        <div class="dropdown-content">
+        <a href="colaborar.html">Colaborar</a>  
+          <a href="empresas.html">Empresas que colaboran</a>
+          <a href="personas_apoyan.html">Personas que apoyan</a>
+        </div>
+      </li>
+      <a href="contacto.html">Contacto</a>
+      
+      
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="navbar-mobile">
+    <div class="menu-icon">
+      <img src="iconos/icon_menu.svg" alt="Menu Icon">
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Colaborar </a>
+          <div class="dropdown-content">
+          <a href="colaborar.html">Colaborar</a>  
+            <a href="empresas.html">Empresas que colaboran</a>
+            <a href="personas_apoyan.html">Personas que apoyan</a>
+          </div>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+        
+      </ul>
+      <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
+    </div>
+  </nav>
+
+  <div class="centered-content">
+    <div class="introduction">
+     <div>
+      <video autoplay muted loop>
+        <source src="conceptos-imagenes/background_video_real.mp4" type="video/mp4" />
+      </video>
+      
+      <div class="intro-text">
+        <h1>Space Vision</h1>
+        
+        <p>
+          Explora los misterios del cosmos con Space Vision! Sumérgete en el fascinante mundo de las estrellas y el universo a través de nuestros cursos de astronomía y astrofísica diseñados para cautivar a tu mente y alimentar tu pasión por la exploración espacial.
+        </p>
+        
+      </div>
+
+      <div class="video-text">
+        Space Vision: aprende astronomía y astrofísica
+      </div>
+    </div>
+
+    
+    
+  
+    </div>
+    <!-- ... Código HTML anterior ... -->
+
+<!-- Cursos-->
+
+<section class="resumen">
+  <h1>Space Vision</h1>
+        
+        <p> En Space Vision, nuestra pasión es el cosmos y queremos compartir el asombroso mundo del espacio contigo. Además, desarrollamos proyectos relacionados con el espacio, ofreciendo una oportunidad única para explorar y contribuir al conocimiento del cosmos. Nuestros cursos de astronomía y astrofísica te invitan a explorar los misterios del universo y a desvelar los secretos de las estrellas. Te sumergirás en fascinantes conceptos científicos mientras te maravillas con la vastedad del espacio y las maravillas cósmicas que nos rodean.</p>
+        <img src="conceptos-imagenes/Tech Space (2) (2).png" >
+
+        
+</section>
+<h2 class="cursos">Cursos</h2>
+<h3>Obtendrás un certificado gratuito al completar el curso y aprobar el examen</h3>
+<section class="main-container">
+  <div class="card-container">
+
+    <!-- Curso 1 -->
+    <a href="en_curso.html" class="product-card" target="_blank">
+      <img src="https://images.pexels.com/photos/17505904/pexels-photo-17505904/free-photo-of-nebulosa-m78.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div class="product-info">
+        <div>
+          <p>Introducción a la astronomía</p>
+          <p>Curso de inicio</p>
+        </div>
+        <figure>
+          <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="">
+        </figure>
+      </div>
+    </a>
+
+    <!-- Curso 2 -->
+    <a href="en_curso.html" class="product-card" target="_blank">
+      <img src="https://www.juntadeandalucia.es/presidencia/portavoz/resources/files/2023/2/16/1676563269791Astrofisica_Est.jpg" alt="">
+      <div class="product-info">
+        <div>
+          <p>Introducción a la astrofísica</p>
+          <p>Curso de inicio</p>
+        </div>
+        <figure>
+          <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="">
+        </figure>
+      </div>
+    </a>
+
+    <!-- Curso 3 -->
+    <a href="en_curso.html" class="product-card" target="_blank">
+      <img src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/07/26/5fa52c231096a.jpeg" alt="">
+      <div class="product-info">
+        <div>
+          <p>Teoría de relatividad general y especial</p>
+          <p>Curso avanzado</p>
+        </div>
+        <figure>
+          <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="">
+        </figure>
+      </div>
+    </a>
+
+    <!-- Agrega más cursos con la estructura de la tarjeta de arriba -->
+  </div>
+</section>
+<section class="chatbot">
+  <h1>Chatbot</h1>
+  <p> Somos mucho más que un sitio web de cursos en astronomía y astrofísica. Nuestro innovador chatbot te llevará en un emocionante viaje a través del cosmos. Descubre información detallada sobre estrellas, planetas, galaxias y más, todo acompañado de hermosas imágenes y una voz que te guiará en cada descubrimiento. Explora el universo a través de una experiencia interactiva única que despertará tu curiosidad y asombro por el espacio infinito.</p>
+  <a href="chatbot.html" target="_blank">
+  <img src="conceptos-imagenes/chatbot-image.png">
+</a>
+<section class="chatbot-button">
+  <a href="chatbot.html" target="_blank">
+  <button class="pagar-button">Chatbot</button>
+  </a>
+</section>
+</section>
+
+<section class="sobre-nosotros">
+  <h1>Sobre nosotros</h1>
+  <p>Nuestro objetivo en Space Vision es fomentar la comprensión y el asombro del universo mediante la creación y ofrecimiento de cursos en astronomía y astrofísica de calidad. Además, desarrollamos proyectos relacionados con el espacio, ofreciendo una oportunidad única para explorar y contribuir al conocimiento del cosmos. Buscamos inspirar y educar a personas de todas las edades, desde entusiastas principiantes hasta apasionados científicos, proporcionando un acceso fácil y accesible a conocimientos y descubrimientos sobre el espacio.</p>
+  <p>Muneeb Mazhar, creador de Space Vision, apasionante de astronomía y astrofísica, compartiendo la maravilla del universo a través de cursos inspiradores. 🚀🌌</p>
+  <a href="https://www.linkedin.com/in/muneeb-mazhar-240852217/" target="_blank">
+    
+  <img src="conceptos-imagenes/creador.jpg">
+</a>
+  <h3>Co-Founder & CEO de Space Vision </h3>
+</section>
+
+<section class="colabora">
+  <h1>Colabora</h1>
+  <p>Con tu generosa donación, avanzaremos juntos en nuestros proyectos. Tu colaboración es esencial para seguir inspirando cambios positivos. ¡Únete a nuestro equipo y juntos hagamos realidad nuestra visión! ¡Gracias por ser parte de este impacto!</p>
+  
+  <a href="https://buy.stripe.com/7sI7tm7y48MDeyYfYZ" target="_blank">
+    
+  <img src="conceptos-imagenes/colabora.png">
+</a>
+
+<section class="last">
+  <a href="https://buy.stripe.com/7sI7tm7y48MDeyYfYZ" target="_blank">
+  <button class="pagar-button">Pagar</button>
+  </a>
+</section>
+</section>
+
+
+<section class="social-media">
+  <a href="https://www.youtube.com/channel/UCP0pPgglqV1FKcH8hFSMuLw" class="social-icon" target="_blank">
+      <img src="conceptos-imagenes/youtube_log.png" alt="YouTube">
+  </a>
+  <a href="https://twitter.com/SpaceVision5623" class="social-icon" target="_blank">
+      <img  src="conceptos-imagenes/x.webp" alt="X">
+  </a>
+  <a href="https://www.instagram.com/spacevision84/" class="social-icon" target="_blank">
+      <img  src="conceptos-imagenes/instagram.webp" alt="Instagram">
+  </a>
+  
+</section>
+
+<button id="scrollTopButton">↑</button>
+
+
+<script>
+  // Agregamos eventos de ratón a cada tarjeta para animarlas y dirigir a otra página web al hacer clic
+  const productCards = document.querySelectorAll('.product-card');
+
+  productCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.classList.add('hovered');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('hovered');
+    });
+
+    card.addEventListener('click', (event) => {
+      event.preventDefault();
+      const href = card.getAttribute('href');
+      window.location.href = href;
+    });
+  });
+</script>
+
+
+    
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbarMobile = document.querySelector('.navbar-mobile');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    menuIcon.addEventListener('click', () => {
+      navbarMobile.classList.toggle('menu-open');
+    });
+  </script>
+
+  <script>
+    // Mostrar u ocultar el botón dependiendo de la posición de la página
+window.onscroll = function() {
+    var button = document.getElementById("scrollTopButton");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+// Animación para desplazarse suavemente hacia arriba al hacer clic en el botón
+document.getElementById("scrollTopButton").addEventListener("click", function() {
+    smoothScrollToTop(1000); // 1000 es la duración de la animación en milisegundos
+});
+
+function smoothScrollToTop(duration) {
+    var startingY = window.pageYOffset;
+    var startTime = performance.now();
+
+    function scrollStep(timestamp) {
+        var currentTime = timestamp || performance.now();
+        var timeElapsed = currentTime - startTime;
+        var scrollTo = Math.max(startingY - timeElapsed / duration * startingY, 0);
+        window.scrollTo(0, scrollTo);
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
+  </script>
+</body>
+
+</html>

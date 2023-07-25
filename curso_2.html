@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Curso</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url("conceptos-imagenes/space-bg.jpg");
+      color: black;
+      object-fit: cover;
+    }
+
+
+
+    /* Desktop Navbar */
+    .navbar-desktop {
+      background-color: var(--white);
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .nav-items-desktop {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-items-desktop a {
+      text-decoration: none;
+      color: var(--black);
+      margin-right: 12px;
+      font-size: var(--sm);
+    }
+
+    /* Mobile Menu */
+    .navbar-mobile {
+      display: none;
+    }
+
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background-color: var(--white);
+      padding: 24px;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-menu ul li {
+      margin-bottom: 16px;
+    }
+
+    .mobile-menu ul li a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+      font-size: var(--sm);
+    }
+
+    /* Mobile Menu Open */
+    .menu-open {
+      overflow: hidden;
+    }
+
+    .menu-open .navbar-mobile {
+      width: 250px;
+    }
+
+    .menu-open .mobile-menu {
+      transform: translateX(0);
+    }
+
+    /* Logo in Mobile Menu */
+    .mobile-menu-logo {
+      margin-top: auto;
+      width: 40px;
+      height: 40px;
+      align-self: flex-start;
+    }
+
+    /* Estilos generales */
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 20%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos del contenedor principal */
+.course-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border: 3px solid #007bff;
+      }
+
+@keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+.course-intro h1 {
+    margin-top: 5px;
+   
+    font-size: 36px;
+    text-align: center;
+      padding-top: 80px;
+      color: #007bff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #007bff, #4dd2ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.subtitle{
+    text-align: justify ;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+.concepts-text {
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.concepts-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.concepts-list li {
+    margin-bottom: 5px;
+}
+
+.exam-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.material-button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.exam-button:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del menú desplegable al hacer clic */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+     }
+
+
+
+  
+
+@media screen and (max-width: 650px) 
+
+{
+
+   
+
+        .navbar-desktop {
+                display: none;
+            }
+        
+            .navbar-mobile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: white;
+                height: 60px;
+                padding: 0 12px;
+                border-bottom: 1px solid var(--very-light-pink);
+            }
+        
+            .menu-icon {
+                display: block;
+            }
+        
+            .mobile-menu {
+                display: block;
+            }
+
+  
+}
+    
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar-desktop">
+    <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
+    <div class="nav-items-desktop">
+      <a href="Home.html">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="proyectos.html">Proyectos</a>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Colaborar </a>
+        <div class="dropdown-content">
+        <a href="colaborar.html">Colaborar</a>  
+          <a href="empresas.html">Empresas que colaboran</a>
+          <a href="personas_apoyan.html">Personas que apoyan</a>
+        </div>
+      </li>
+      <a href="contacto.html">Contacto</a>
+      
+      
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="navbar-mobile">
+    <div class="menu-icon">
+      <img src="iconos/icon_menu.svg" alt="Menu Icon">
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Colaborar </a>
+          <div class="dropdown-content">
+          <a href="colaborar.html">Colaborar</a>  
+            <a href="empresas.html">Empresas que colaboran</a>
+            <a href="personas_apoyan.html">Personas que apoyan</a>
+          </div>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+       
+      </ul>
+      <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
+    </div>
+  </nav>
+
+
+  <div class="course-intro">
+    <h1>Curso de Introducción a la Astronomía</h1>
+    <div class="video-container">
+      <div id="spinner">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+      <!-- Inserta aquí el código del video de YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LlW-q5ALGc8" frameborder="0" onload="document.getElementById('spinner').style.display='none';" allowfullscreen></iframe>
+    </div>
+    <p class="concepts-text">¿Qué aprenderás?</p>
+    <p class="subtitle"> Descubre los misterios del cosmos en este curso introductorio. Aprende sobre objetos celestes como estrellas, planetas, asteroides, cometas y meteoritos. Explora el Sistema Solar con sus planetas y lunas. Sumérgete en la teoría del Big Bang y la expansión del universo. Conoce la composición del universo, incluyendo materia oscura y energía oscura.</p>
+    <a class="exam-button" href="enlace_del_examen.html">Realizar Examen</a>
+    <a class="material-button" href="enlace_del_examen.html">Material</a>
+</div>
+    
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbarMobile = document.querySelector('.navbar-mobile');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    menuIcon.addEventListener('click', () => {
+      navbarMobile.classList.toggle('menu-open');
+    });
+  </script>
+
+</body>
+
+</html>

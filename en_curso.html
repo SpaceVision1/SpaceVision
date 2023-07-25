@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>En curso</title>
+</head>
+
+    
+<style>
+    :root {
+    ---very-light-pink:#C7C7C7;
+    ---text-input-field:#F7F7F7;
+    ---hospital-green:#ACD9B2;
+    ---white:#FFFFFF;
+    ---black:#000000;
+    ---Dark:#232830;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    }
+    
+    body{
+        margin:0;
+        font-family: 'Quicksand', sans-serif;
+        
+        
+        
+    }
+
+    body {
+            font-family: Arial, sans-serif;
+            
+        }
+        .apoyo-container {
+            text-align: center;
+            margin: 20px;
+            
+            
+        }
+        .apoyo-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 90px;
+        }
+        .apoyo-description {
+            font-size: 16px;
+            color: white;
+            padding:20px;
+            font-size: large;
+            font-family: 'Quicksand', sans-serif;
+            text-align: left;
+            text-align: justify;
+            
+        }
+        .apoyo-card {
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: white;
+            background-image: url("conceptos-imagenes/space-bg.jpg");
+            object-fit: cover;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            gap: 50px;
+        }
+        .apoyo-card:hover {
+            transform: scale(1.1);
+        }
+        .apoyo-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .apoyo-image {
+            width: 170px;
+            height: 170px;
+            border-radius:  50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            
+        }
+
+
+
+h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: white;
+            margin-top: 60px;
+        }
+
+   
+
+    .navbar-desktop {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+        }
+        
+        .nav-items-desktop {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-items-desktop a {
+            text-decoration: none;
+            color: var(--black);
+            margin-right: 12px;
+            font-size: var(--sm);
+        }
+        
+        /* Mobile Menu */
+        .navbar-mobile {
+            display: none;
+            background-color: white;
+        }
+        
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin: 20px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background-color: var(--white);
+            padding: 24px;
+            z-index: 999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: white;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+        
+        
+        .mobile-menu ul li {
+            margin-bottom: 16px;
+        }
+        
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+            font-size: var(--sm);
+        }
+        
+        /* Mobile Menu Open */
+        .menu-open {
+            overflow: hidden;
+        }
+        
+        .menu-open .navbar-mobile {
+            width: 250px;
+        }
+        
+        .menu-open .mobile-menu {
+            transform: translateX(0);
+        }
+        
+        /* Logo in Mobile Menu */
+        .mobile-menu-logo {
+            margin-top: auto;
+            width: 40px;
+            height: 40px;
+            align-self: flex-start;
+        }
+
+        
+
+        
+
+        
+        @media (max-width: 640px) {
+            .navbar-desktop {
+                display: none;
+            }
+        
+            .navbar-mobile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: white;
+                height: 60px;
+                padding: 0 12px;
+                border-bottom: 1px solid var(--very-light-pink);
+            }
+        
+            .menu-icon {
+                display: block;
+            }
+        
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        .video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+        .dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del menú desplegable al hacer clic */
+.dropdown:hover .dropdown-content {
+  display: block;
+
+     }
+</style>
+
+<body>
+     <!-- Desktop Navbar -->
+
+     <div class="video-fondo">
+        <video autoplay muted loop>
+          <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
+        </video>
+      </div>
+    <nav class="navbar-desktop">
+        
+        <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
+        <div class="nav-items-desktop">
+            <a href="Home.html">Inicio</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="proyectos.html">Proyectos</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Colaborar </a>
+                <div class="dropdown-content">
+                <a href="colaborar.html">Colaborar</a>  
+                  <a href="empresas.html">Empresas que colaboran</a>
+                  <a href="personas_apoyan.html">Personas que apoyan</a>
+                </div>
+              </li>
+            <a href="contacto.html">Contacto</a>
+            
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="navbar-mobile">
+        <div class="video-fondo">
+            <video autoplay muted loop>
+              <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
+            </video>
+          </div>
+        
+        <div class="menu-icon">
+            <img src="iconos/icon_menu.svg" alt="Menu Icon">
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="Home.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Colaborar </a>
+                    <div class="dropdown-content">
+                    <a href="colaborar.html">Colaborar</a>  
+                      <a href="empresas.html">Empresas que colaboran</a>
+                      <a href="personas_apoyan.html">Personas que apoyan</a>
+                    </div>
+                  </li>
+                
+                <li><a href="contacto.html">Contacto</a></li>
+                
+            </ul>
+            <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
+        </div>
+    </nav>
+
+
+    <div class="apoyo-container">
+        <h1 class="apoyo-title"> EN CURSO </h1>
+        
+    </div>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbarMobile = document.querySelector('.navbar-mobile');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        menuIcon.addEventListener('click', () => {
+            navbarMobile.classList.toggle('menu-open');
+        });
+    </script>
+
+    
+    
+</body>
+    
