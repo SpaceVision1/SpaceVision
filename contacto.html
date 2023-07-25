@@ -1,287 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Contacto</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("VDyrkhwi5IJyVMilv");
+        })();
+    </script>
 </head>
 
-    
+
 <style>
     :root {
-    ---very-light-pink:#C7C7C7;
-    ---text-input-field:#F7F7F7;
-    ---hospital-green:#ACD9B2;
-    ---white:#FFFFFF;
-    ---black:#000000;
-    ---Dark:#232830;
-    --sm:14px;
-    --md:16px;
-    --lg:18px;
+        ---very-light-pink: #C7C7C7;
+        ---text-input-field: #F7F7F7;
+        ---hospital-green: #ACD9B2;
+        ---white: #FFFFFF;
+        ---black: #000000;
+        ---Dark: #232830;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
     }
-    
-    body{
-        margin:0;
+
+    body {
+        margin: 0;
         font-family: 'Quicksand', sans-serif;
         background-image: url("conceptos-imagenes/space-bg.jpg");
         object-fit: cover;
-        
-        
+
+
     }
 
-   
+
 
     .navbar-desktop {
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 24px;
-            border-bottom: 1px solid var(--very-light-pink);
-        }
-        
-        .logo {
-            width: 50px;
-            height: 50px;
-            margin-top: 6px;
-            margin-bottom: 2px;
-        }
-        
-        .nav-items-desktop {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-items-desktop a {
-            text-decoration: none;
-            color: var(--black);
-            margin-right: 12px;
-            font-size: var(--sm);
-        }
-        
-        /* Mobile Menu */
-        .navbar-mobile {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        border-bottom: 1px solid var(--very-light-pink);
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 6px;
+        margin-bottom: 2px;
+    }
+
+    .nav-items-desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-items-desktop a {
+        text-decoration: none;
+        color: var(--black);
+        margin-right: 12px;
+        font-size: var(--sm);
+    }
+
+    /* Mobile Menu */
+    .navbar-mobile {
+        display: none;
+        background-color: white;
+    }
+
+    .menu-icon {
+        width: 24px;
+        height: 24px;
+        margin: 20px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: var(--white);
+        padding: 24px;
+        z-index: 999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+
+
+    .mobile-menu ul li {
+        margin-bottom: 16px;
+    }
+
+    .mobile-menu ul li a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+        font-size: var(--sm);
+    }
+
+    /* Mobile Menu Open */
+    .menu-open {
+        overflow: hidden;
+    }
+
+    .menu-open .navbar-mobile {
+        width: 250px;
+    }
+
+    .menu-open .mobile-menu {
+        transform: translateX(0);
+    }
+
+    /* Logo in Mobile Menu */
+    .mobile-menu-logo {
+        margin-top: auto;
+        width: 40px;
+        height: 40px;
+        align-self: flex-start;
+    }
+
+    .video-fondo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+
+
+
+    @media (max-width: 640px) {
+        .navbar-desktop {
             display: none;
-            background-color: white;
         }
-        
-        .menu-icon {
-            width: 24px;
-            height: 24px;
-            margin: 20px;
-            cursor: pointer;
-            color: white;
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 250px;
-            height: 100%;
-            background-color: var(--white);
-            padding: 24px;
-            z-index: 999;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background-color: white;
-        }
-        
-        .mobile-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-        }
-
-        
-        
-        .mobile-menu ul li {
-            margin-bottom: 16px;
-        }
-        
-        .mobile-menu ul li a {
-            text-decoration: none;
-            color: var(--black);
-            font-weight: bold;
-            font-size: var(--sm);
-        }
-        
-        /* Mobile Menu Open */
-        .menu-open {
-            overflow: hidden;
-        }
-        
-        .menu-open .navbar-mobile {
-            width: 250px;
-        }
-        
-        .menu-open .mobile-menu {
-            transform: translateX(0);
-        }
-        
-        /* Logo in Mobile Menu */
-        .mobile-menu-logo {
-            margin-top: auto;
-            width: 40px;
-            height: 40px;
-            align-self: flex-start;
-           }
-
-           .video-fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-           
-
-        
-        @media (max-width: 640px) {
-            .navbar-desktop {
-                display: none;
-            }
-
-            .container  {
-            margin-left: 40px !important;
-            margin-right:40px !important;
-            
-        }
-
-        
-            .navbar-mobile {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                background-color: white;
-                height: 60px;
-                padding: 0 12px;
-                border-bottom: 1px solid var(--very-light-pink);
-            }
-        
-            .menu-icon {
-                display: block;
-            }
-        
-            .mobile-menu {
-                display: block;
-            }
-
-        }
-
-        .dropdown {
-  position: relative;
-  list-style: none;
-}
-
-.dropbtn {
-  cursor: pointer;
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Mostrar el contenido del menú desplegable al hacer clic */
-.dropdown:hover .dropdown-content {
-  display: block;
-
-     }
-
 
         .container {
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 35px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border: 3px solid green;
+            margin-left: 40px !important;
+            margin-right: 40px !important;
+
         }
 
-        .container h2 {
-            text-align: center;
+
+        .navbar-mobile {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            height: 60px;
+            padding: 0 12px;
+            border-bottom: 1px solid var(--very-light-pink);
         }
 
-        .container form {
-            display: grid;
-            grid-gap: 10px;
-            padding: 30px;
-            
-            
+        .menu-icon {
+            display: block;
         }
 
-        
-        .container label{
-            width: 100%;
-            padding: 10px;
-            font-weight: bold;
-        }
-        .container input,
-        .container textarea {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid green;
-            border-radius: 20px;
-            box-sizing: border-box;
+        .mobile-menu {
+            display: block;
         }
 
-        .container textarea {
-            resize: vertical;
-        }
+    }
 
-        .container input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            margin-top: 15px;
-            border-radius: 15px;
-        }
+    .dropdown {
+        position: relative;
+        list-style: none;
+    }
 
-        .container input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+    .dropbtn {
+        cursor: pointer;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Mostrar el contenido del menú desplegable al hacer clic */
+    .dropdown:hover .dropdown-content {
+        display: block;
+
+    }
+
+
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 35px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 3px solid green;
+    }
+
+    .container h2 {
+        text-align: center;
+    }
+
+    .container form {
+        display: grid;
+        grid-gap: 10px;
+        padding: 30px;
+
+
+    }
+
+
+    .container label {
+        width: 100%;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .container input,
+    .container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid green;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .container textarea {
+        resize: vertical;
+    }
+
+    .container input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        margin-top: 15px;
+        border-radius: 15px;
+    }
+
+    .container input[type="submit"]:hover {
+        background-color: #45a049;
+    }
 </style>
 
 <body>
-     <!-- Desktop Navbar -->
+    <!-- Desktop Navbar -->
 
-     <div class="video-fondo">
+    <div class="video-fondo">
         <video autoplay muted loop>
-          <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
+            <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4" />
         </video>
-      </div>
+    </div>
 
     <nav class="navbar-desktop">
-        
+
         <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
         <div class="nav-items-desktop">
             <a href="index.html">Inicio</a>
@@ -291,24 +300,24 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">Colaborar </a>
                 <div class="dropdown-content">
-                <a href="colaborar.html">Colaborar</a>  
-                  <a href="empresas.html">Empresas que colaboran</a>
-                  <a href="personas_apoyan.html">Personas que apoyan</a>
+                    <a href="colaborar.html">Colaborar</a>
+                    <a href="empresas.html">Empresas que colaboran</a>
+                    <a href="personas_apoyan.html">Personas que apoyan</a>
                 </div>
-              </li>
+            </li>
             <a href="contacto.html">Contacto</a>
-            
+
         </div>
     </nav>
 
     <!-- Mobile Menu -->
     <nav class="navbar-mobile">
-        
+
         <div class="video-fondo">
             <video autoplay muted loop>
-              <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
+                <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4" />
             </video>
-          </div>
+        </div>
 
         <div class="menu-icon">
             <img src="iconos/icon_menu.svg" alt="Menu Icon">
@@ -323,14 +332,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Colaborar </a>
                     <div class="dropdown-content">
-                    <a href="colaborar.html">Colaborar</a>  
-                      <a href="empresas.html">Empresas que colaboran</a>
-                      <a href="personas_apoyan.html">Personas que apoyan</a>
+                        <a href="colaborar.html">Colaborar</a>
+                        <a href="empresas.html">Empresas que colaboran</a>
+                        <a href="personas_apoyan.html">Personas que apoyan</a>
                     </div>
-                  </li>
-                
+                </li>
+
                 <li><a href="contacto.html">Contacto</a></li>
-                
+
             </ul>
             <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
         </div>
@@ -338,7 +347,7 @@
 
     <div class="container">
         <h2>Contacto</h2>
-        <form action="server/index.php" method="post">
+        <form method="post">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
@@ -354,22 +363,46 @@
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
 
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" onclick="sendMail()">
         </form>
     </div>
-    
+
 
     <script>
         const menuIcon = document.querySelector('.menu-icon');
         const navbarMobile = document.querySelector('.navbar-mobile');
         const mobileMenu = document.querySelector('.mobile-menu');
-    
+
         menuIcon.addEventListener('click', () => {
             navbarMobile.classList.toggle('menu-open');
         });
+
+        function sendMail() {
+            event.preventDefault();
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+                phone: document.getElementById("phone").value,
+                subject: document.getElementById("subject").value
+            };
+
+            const serviceID = "service_x3mbjie";
+            const templateID = "template_z4owu7p";
+            console.log('puta no entra')
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                })
+                .catch(err => console.log(err));
+
+        }
     </script>
 
-    
-    
+
+
 </body>
-    
