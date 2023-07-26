@@ -26,18 +26,12 @@
     body{
         margin:0;
         font-family: 'Quicksand', sans-serif;
+        background-image: url("conceptos-imagenes/space3.jpeg");
+        object-fit: cover;
         
     }
 
-    .video-fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
+    
 
     
 
@@ -149,8 +143,8 @@
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
-            margin-top: 70px;
-            background-image: url("conceptos-imagenes/space-bg.jpg");
+            margin-top: 50px;
+            background-image: url("conceptos-imagenes/chat.jpeg");
             border-radius: 20px;
             align-self: center;
             border: 3px solid blue;
@@ -271,17 +265,21 @@
             .mobile-menu {
                 display: block;
             }
+
+            .chat-container{
+                margin-bottom:60px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+            
         }
 </style>
 
 <body>
      <!-- Desktop Navbar -->
     <nav class="navbar-desktop">
-        <div class="video-fondo">
-            <video autoplay muted loop>
-              <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
-            </video>
-          </div>
+       
         <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
         <div class="nav-items-desktop">
             <a href="index.html">Inicio</a>
@@ -303,11 +301,7 @@
 
     <!-- Mobile Menu -->
     <nav class="navbar-mobile">
-        <div class="video-fondo">
-            <video autoplay muted loop>
-              <source src="conceptos-imagenes/proyectos.mp4" type="video/mp4"/>
-            </video>
-          </div>
+        
         <div class="menu-icon">
             <img src="iconos/icon_menu.svg" alt="Menu Icon">
         </div>
@@ -334,8 +328,7 @@
 
     <section class="chatbot-texto">
         <h1>CHATBOT</h1>
-        <p>Este chatbot te permite saber sobre los objetos celestes que existen, con imágenes y 
-            una voz guiada. Si quieres parar el chatbot o eliminar los mensajes utilize CLEAR. El chatbot está en desarrollo,
+        <p>Este chatbot te permite saber sobre los objetos celestes que existen. Si quieres parar el chatbot o eliminar los mensajes utilize CLEAR. El chatbot está en desarrollo,
             irémos añadiendo más objetos. Para que funcione correctamente necesitas utilizar el término correcto.
 
         </p>
@@ -354,16 +347,16 @@
             userInput = userInput.toLowerCase();
     
             if (userInput.includes('planeta') || userInput.includes('planetas')) {
-                respuesta = '<img src="conceptos-imagenes/planeta.gif" alt="Planetas" style="width: 100%;">' +
+                respuesta =  
                     'Los planetas son objetos celestes que orbitan alrededor de una estrella y no emiten luz propia. En nuestro sistema solar, tenemos ocho planetas: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno.';
             } else if (userInput.includes('galaxia')) {
-                respuesta = '<img src="conceptos-imagenes/galaxia.jpg" alt="Galaxia" style="width: 100%;">' +
+                respuesta = 
                     'Una galaxia es un enorme conjunto de estrellas, planetas, gas y polvo cósmico, junto con energía oscura. Nuestra galaxia, la Vía Láctea, contiene miles de millones de estrellas y se estima que hay miles de millones de galaxias en el universo.';
             } else if (userInput.includes('sistema solar')) {
-                respuesta = '<img src="conceptos-imagenes/sistema-solar.gif" alt="Sistema Solar" style="width: 100%;">' +
+                respuesta = 
                     'El sistema solar es un sistema planetario que se encuentra en la Vía Láctea y está compuesto por una estrella central llamada Sol y todos los objetos que orbitan a su alrededor, incluyendo planetas, asteroides, cometas y satélites naturales.';
             } else if (userInput.includes('estrella')) {
-                respuesta = '<img src="conceptos-imagenes/estrellas.gif" alt="Estrella" style="width: 100%;">' +
+                respuesta = 
                     'Las estrellas son grandes bolas de gas caliente que generan luz y calor mediante reacciones nucleares en su núcleo. Son las unidades fundamentales de las galaxias y juegan un papel crucial en la formación y evolución del universo.';
             } else if (userInput.includes('astrónomo')) {
                 respuesta = 'Algunos famosos astrónomos son Nicolaus Copérnico, Galileo Galilei, Johannes Kepler, Isaac Newton, Edwin Hubble, Carl Sagan y Stephen Hawking, entre otros.';
@@ -374,22 +367,22 @@
             } 
             
             else if (userInput.includes('constelación') || userInput.includes('constelaciones')) {
-            respuesta = '<img src="conceptos-imagenes/constelaciones.gif" alt="Constelaciones" style="width: 100%;">' +
+            respuesta = 
                 'Las constelaciones son agrupaciones aparentes de estrellas en el cielo nocturno. Son patrones reconocibles y se utilizan como referencia para ubicar objetos celestes. Las constelaciones han sido utilizadas desde la antigüedad para la navegación, la agricultura y para contar historias mitológicas.';
             } else if (userInput.includes('nebulosa') || userInput.includes('nebulosas')) {
-            respuesta = '<img src="conceptos-imagenes/nebulosa.gif" alt="Nebulosas" style="width: 100%;">' +
+            respuesta = 
                 'Las nebulosas son nubes gigantes de polvo, gas y plasma en el espacio interestelar. Pueden ser el lugar de formación de nuevas estrellas o el remanente de estrellas que han explotado. Las nebulosas pueden tener formas y colores variados y son objetos fascinantes para estudiar en la astronomía.';
             } else if (userInput.includes('satélite natural') || userInput.includes('satélites naturales')) {
-            respuesta = '<img src="conceptos-imagenes/satelites.gif" alt="Satélites Naturales" style="width: 100%;">' +
+            respuesta = 
                 'Los satélites naturales son cuerpos celestes que orbitan alrededor de planetas u otros objetos más grandes en el espacio. La Luna es el satélite natural de la Tierra y es el objeto más brillante en el cielo nocturno. Otros planetas en el sistema solar también tienen sus propios satélites naturales.';
             } else if (userInput.includes('cometa') || userInput.includes('cometas')) {
-            respuesta = '<img src="conceptos-imagenes/cometa.gif" alt="Cometas" style="width: 100%;">' +
+            respuesta = 
                 'Los cometas son cuerpos celestes compuestos de hielo, polvo y rocas. Tienen órbitas elípticas alrededor del Sol y, cuando se acercan a él, el calor provoca que el hielo se sublima y se formen las características colas de gas y polvo. Los cometas son objetos fascinantes que han capturado la atención de los astrónomos durante siglos.';
             } else if (userInput.includes('meteoro') || userInput.includes('meteoros')) {
-            respuesta = '<img src="conceptos-imagenes/meteoro.gif" alt="Meteoros" style="width: 100%;">' +
+            respuesta = 
                 'Los meteoros, también conocidos como estrellas fugaces, son fenómenos luminosos que se producen cuando partículas de polvo y rocas llamadas meteoroides ingresan a la atmósfera de la Tierra y se queman debido al calor generado por la fricción. Los meteoros pueden ser visibles en el cielo nocturno y son especialmente comunes durante las lluvias de meteoros.';
                    } else if (userInput.includes('agujero negro') || userInput.includes('agujeros negros')) {
-            respuesta = '<img src="conceptos-imagenes/agujero-negro.gif" alt="Agujero negro" style="width: 100%;">' +
+            respuesta = 
                 'Un agujero negro es una región del espacio-tiempo con una fuerza gravitatoria tan intensa que nada, ni siquiera la luz, puede escapar de ella. La gravedad en un agujero negro es tan fuerte debido a una gran concentración de masa en un volumen extremadamente pequeño. Esta concentración masiva crea una curvatura en el espacio-tiempo que atrapa cualquier cosa que se acerque lo suficiente.' +
                 'La formación de un agujero negro ocurre cuando una estrella masiva colapsa bajo su propia gravedad después de agotar su combustible nuclear. Durante este colapso, la estrella se comprime en un punto infinitamente denso conocido como una singularidad. Alrededor de la singularidad, existe una región llamada horizonte de eventos, que es el límite a partir del cual nada puede escapar.' +
                 'Los agujeros negros pueden tener diferentes tamaños y masas. Existen agujeros negros estelares, que se forman a partir del colapso de estrellas masivas, y agujeros negros supermasivos, que se encuentran en el centro de las galaxias y contienen millones o incluso miles de millones de veces la masa del Sol.' +
@@ -397,7 +390,7 @@
             }
 
              else if (userInput.includes('asteroide') || userInput.includes('asteroides')) {
-            respuesta = '<img src="conceptos-imagenes/asteroide.gif" alt="Asteroides" style="width: 100%;">' +
+            respuesta = 
                 'Los asteroides son objetos rocosos que orbitan alrededor del Sol en el sistema solar. Están compuestos principalmente de rocas, minerales y metales, y varían en tamaño desde pequeñas rocas hasta cuerpos de varios kilómetros de diámetro. La mayoría de los asteroides se encuentran en el cinturón de asteroides, una región ubicada entre las órbitas de Marte y Júpiter.' +
                 'Los asteroides se consideran remanentes del material que quedó después de la formación del sistema solar. Algunos asteroides tienen formas irregulares, mientras que otros pueden tener una forma más esférica. Existen miles de millones de asteroides en el cinturón de asteroides, y se estima que hay muchos más dispersos por todo el sistema solar.' +
                 'Algunos asteroides tienen órbitas que los acercan a la Tierra, y se denominan asteroides cercanos a la Tierra. Estos asteroides representan un interés particular para los científicos y astrónomos, ya que pueden representar un riesgo potencial de impacto con nuestro planeta. Se realizan estudios para comprender mejor su composición, tamaño, órbita y posibles métodos para desviarlos en caso de una amenaza.' +
@@ -405,68 +398,68 @@
     }
 
     else if (userInput.includes('creador') || userInput.includes('quien te ha creado')) {
-  respuesta = '<img src="conceptos-imagenes/creador.jpg" alt="creador" style="width: 100%;">' +
+  respuesta = 
     'Mi creador se llama Muneeb Mazhar, es el CEO de Space Vision.'; 
        }
 
        else if (userInput.includes('cumulo de galaxia') || userInput.includes('cumulo')) {
-  respuesta = '<img src="conceptos-imagenes/cumulo.jpg" alt="creador" style="width: 100%;">' +
+  respuesta = 
     'Un cúmulo de galaxias es una vasta agrupación de galaxias que se encuentran unidas gravitacionalmente. Estas agrupaciones contienen desde unas pocas hasta miles de galaxias, que interactúan entre sí a través de fuerzas gravitacionales mutuas. Los cúmulos de galaxias son algunas de las estructuras más grandes conocidas en el universo y desempeñan un papel crucial en la comprensión de la formación y evolución de las galaxias, así como en la cosmología y la estructura a gran escala del universo. Estudiar los cúmulos de galaxias nos proporciona información invaluable sobre cómo se agrupan y se distribuyen las galaxias a lo largo del cosmos.'; 
        }
 
        else if (userInput.includes('mercurio') ) {
-  respuesta = '<img src="conceptos-imagenes/mercurio.jpg" alt="mercurio" style="width: 100%;">' +
+  respuesta = 
     ' Mercurio es el planeta más cercano al Sol y el más pequeño del sistema solar. Tiene una superficie rocosa y es conocido por sus extremas temperaturas, siendo muy caluroso durante el día y muy frío durante la noche.'; 
        }
 
         
            
     else if (userInput.includes('venus') ) {
-  respuesta = '<img src="conceptos-imagenes/venus.jpg" alt="venus" style="width: 100%;">' +
+  respuesta = 
     ' Venus es el segundo planeta más cercano al Sol y es similar en tamaño y composición a la Tierra. Tiene una densa atmósfera compuesta principalmente por dióxido de carbono, lo que provoca un efecto invernadero que lo convierte en el planeta más caliente del sistema solar.'
           }
 
           else if (userInput.includes('marte') ) {
-  respuesta = '<img src="conceptos-imagenes/marte.jpg" alt="marte" style="width: 100%;">' +
+  respuesta = 
     'También conocido como el "planeta rojo", Marte tiene una apariencia rojiza debido a su superficie rica en óxido de hierro. Se han realizado numerosas misiones espaciales para explorar Marte en busca de evidencias de vida pasada o presente.'
           }
 
 
     
           else if (userInput.includes('jupiter') || userInput.includes('júpiter') ) {
-  respuesta = '<img src="conceptos-imagenes/jupiter.gif" alt="jupiter" style="width: 100%;">' +
+  respuesta = 
   ' Júpiter es el quinto planeta desde el Sol y el más grande del sistema solar. Jupiter es conocido por su impresionante sistema de anillos y numerosas lunas, incluyendo la gigantesca luna Ganímedes, la más grande del sistema solar.'
 
           }
 
           else if (userInput.includes('saturno') ) {
-  respuesta = '<img src="conceptos-imagenes/saturno.jpg" alt="saturno" style="width: 100%;">' +
+  respuesta = 
         'Con sus característicos anillos, Saturno es uno de los planetas más reconocibles del sistema solar. Es el segundo planeta más grande y sus anillos están compuestos principalmente de partículas de hielo y roca.'
           }
 
           else if (userInput.includes('urano') ) {
-  respuesta = '<img src="conceptos-imagenes/urano.jpg" alt="urano" style="width: 100%;">' +
+  respuesta = 
         'Urano es el séptimo planeta desde el Sol y es conocido por su inclinación axial extrema, lo que le da un aspecto peculiar. Urano es considerado un gigante helado debido a su composición de hidrógeno, helio y metano.'
           }
 
 
           else if (userInput.includes('neptuno') ) {
-  respuesta = '<img src="conceptos-imagenes/neptuno.jpg" alt="neptuno" style="width: 100%;">' +
+  respuesta = 
   'Neptuno es el octavo y último planeta del sistema solar. Neptuno es un gigante helado similar a Urano y se caracteriza por su distintivo color azul. Es el planeta más alejado del Sol y cuenta con fuertes vientos y una gran mancha oscura conocida como la "Gran Mancha Oscura de Neptuno.'
           }
 
           else if (userInput.includes('meteorito') ) {
-  respuesta = '<img src="conceptos-imagenes/meteorito.jpg" alt="meteorito" style="width: 100%;">' +
+  respuesta = 
   'Un meteorito es un fragmento rocoso o metálico que proviene del espacio exterior y cae a la Tierra o a otro planeta después de atravesar su atmósfera. Estos fragmentos pueden variar en tamaño, desde pequeñas partículas hasta cuerpos más grandes. Al entrar a la atmósfera, pueden generar una luminosa estela en el cielo conocida como "meteoro" o "estrella fugaz". Si llegan a impactar la superficie terrestre, se les llama meteoritos caídos'
           }
 
           else if (userInput.includes('sol') ) {
-  respuesta = '<img src="conceptos-imagenes/el-sol.jpg" alt="sol" style="width: 100%;">' +
+  respuesta = 
   'El Sol es una estrella que se encuentra en el centro de nuestro sistema solar. Es una esfera compuesta principalmente de hidrógeno y helio que emite luz y calor debido a las reacciones nucleares que ocurren en su núcleo. Es la fuente primaria de energía para todos los planetas y cuerpos celestes que orbitan a su alrededor. La gravedad del Sol mantiene a los planetas en órbita y proporciona las condiciones necesarias para que haya vida en la Tierra.'
           }
 
           else if (userInput.includes('tierra') ) {
-  respuesta = '<img src="conceptos-imagenes/tierra.webp" alt="tierra" style="width: 100%;">' +
+  respuesta = 
   'La Tierra es el tercer planeta del sistema solar, habitado por una amplia diversidad de formas de vida, incluyendo a los seres humanos, y caracterizado por su atmósfera y presencia de agua líquida en su superficie.'
           }
 
@@ -509,11 +502,7 @@
             return respuesta;
         }
     
-        function detenerHablar() {
-            if ('speechSynthesis' in window) {
-                speechSynthesis.cancel();
-            }
-        }
+        
     
         function sendMessage() {
             var userInput = document.getElementById('user-input').value;
@@ -523,7 +512,7 @@
             // Detener la síntesis de voz si el comando es "clear"
             if (userInput.toLowerCase() === 'clear') {
                 reiniciarChat();
-                detenerHablar();
+                
                 return;
             }
     
@@ -532,7 +521,7 @@
     
             // Si la respuesta del chatbot no es "clear", hacer que el chatbot hable el mensaje
            if (chatbotResponse.toLowerCase() !== 'clear') {
-                hablar(chatbotResponse.replace('Chatbot: ', ''));
+                
             } 
         }
     
@@ -560,11 +549,7 @@
             });
         }
     
-        function hablar(texto) {
-            var utterance = new SpeechSynthesisUtterance();
-            utterance.text = texto;
-            speechSynthesis.speak(utterance);
-        }
+        
     
         function agregarMensaje(texto, emisor) {
             const mensaje = document.createElement('li');
@@ -583,6 +568,8 @@
         }
     
         mostrarMensajeBienvenida();
+
+       
     </script>
     
 </body>
