@@ -272,81 +272,76 @@
 </style>
 
 <body>
-    <!-- Desktop Navbar -->
-
-    
-
-    <nav class="navbar-desktop">
-
-        <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
-        <div class="nav-items-desktop">
-            <a href="index.html">Inicio</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="chatbot.html">Chatbot</a>
-            <a href="proyectos.html">Proyectos</a>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Colaborar </a>
-                <div class="dropdown-content">
-                    <a href="colaborar.html">Colaborar</a>
-                    <a href="empresas.html">Empresas que colaboran</a>
-                    <a href="personas_apoyan.html">Personas que apoyan</a>
-                </div>
-            </li>
-            <a href="contacto.html">Contacto</a>
-
+     <!-- Desktop Navbar -->
+  <nav class="navbar-desktop">
+    <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
+    <div class="nav-items-desktop">
+      <a href="index.html">Home</a>
+      <a href="cursos.html">Courses</a>
+      <a href="team.html">Team</a>
+      <a href="proyectos.html">Projects</a>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Collaborate </a>
+        <div class="dropdown-content">
+        <a href="colaborar.html">Collaborate</a>  
+          <a href="empresas.html">Companies that collaborate</a>
+          <a href="personas_apoyan.html">people who support</a>
         </div>
-    </nav>
+      </li>
+      <a href="unete.html" >Join</a>
+      <a href="contacto.html">Contact</a>
+      
+      
 
-    <!-- Mobile Menu -->
-    <nav class="navbar-mobile">
+    </div>
+  </nav>
 
+  <!-- Mobile Menu -->
+  <nav class="navbar-mobile">
+    <div class="menu-icon">
+      <img src="iconos/icon_menu.svg" alt="Menu Icon">
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cursos.html">Courses</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="proyectos.html">Projects</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Collaborate </a>
+          <div class="dropdown-content">
+          <a href="colaborar.html">Collaborate</a>  
+            <a href="empresas.html">Companies that collaborate</a>
+            <a href="personas_apoyan.html">People who support</a>
+          </div>
+        </li>
+        <li><a href="unete.html">Join</a></li>
+        <li><a href="contacto.html">Contact</a></li>
         
-
-        <div class="menu-icon">
-            <img src="iconos/icon_menu.svg" alt="Menu Icon">
-        </div>
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="index.html">Incio</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="chatbot.html">Chatbot</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Colaborar </a>
-                    <div class="dropdown-content">
-                        <a href="colaborar.html">Colaborar</a>
-                        <a href="empresas.html">Empresas que colaboran</a>
-                        <a href="personas_apoyan.html">Personas que apoyan</a>
-                    </div>
-                </li>
-
-                <li><a href="contacto.html">Contacto</a></li>
-
-            </ul>
-            <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
-        </div>
-    </nav>
+      </ul>
+      <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
+    </div>
+  </nav>
 
     <div class="container">
-        <h2>Contacto</h2>
+        <h2>Contact</h2>
         <form method="post">
-            <label for="name">Nombre:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
 
-            <label for="phone">Teléfono:</label>
+            <label for="phone">Telephone:</label>
             <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
 
-            <label for="subject">Asunto:</label>
+            <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" placeholder="Ingresa el asunto" required>
 
-            <label for="message">Mensaje:</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
 
-            <input type="submit" value="Enviar" onclick="sendMail()">
+            <input type="submit" value="Send" onclick="sendMail()">
         </form>
     </div>
 
