@@ -3,39 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Personas que apoyan</title>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-    
 <style>
-    :root {
-    ---very-light-pink:#C7C7C7;
-    ---text-input-field:#F7F7F7;
-    ---hospital-green:#ACD9B2;
-    ---white:#FFFFFF;
-    ---black:#000000;
-    ---Dark:#232830;
-    --sm:14px;
-    --md:16px;
-    --lg:18px;
-    }
-    
-    body{
-        margin:0;
-        font-family: 'Quicksand', sans-serif;
-        background-image: url("conceptos-imagenes/space3.jpeg");
-        object-fit: cover;
-        
-    }
+  /* Reset some default styles */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+}
 
-    
-    
-    
+body {
+  font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-image: url("conceptos-imagenes/space-bg.jpg");
+    object-fit: cover;
+}
 
-    .navbar-desktop {
+.navbar-desktop {
             background-color: white;
             display: flex;
             justify-content: space-between;
@@ -136,27 +121,173 @@
             align-self: flex-start;
         }
 
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            
-        }
-       
+header h1 {
+    font-size: 2rem;
+}
+
+.title {
+  color:white;
+  text-align: center;
+  margin-top:60px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    justify-content: center;
+}
+
+.blog-posts {
+  display: flex;
+    flex-wrap: wrap;
+    
+    margin-bottom: 40px;
+    gap:15px;
+}
+
+.blog-card {
+    width: 300px;
+    background-color: #f9f9f9;
+    
+    margin: 0.5rem;
+    border-radius: 20px;
+    
+    
+    
+    
+}
+
+.blog-card img {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border-radius:  20px 20px 0 0px;
+}
+
+.blog-card h2 {
+    font-size: 1.5rem;
+    
+    padding: 1rem;
+}
+
+.blog-card p {
+    color: #666;
+    padding: 1rem;
+}
+
+.blog-card a { 
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    padding:1rem;
+    margin-left:10px;
+    margin-bottom:10px;
+    position: absolute;
+}
+
+.blog-card a:hover {
+    background-color: #333;
+    color: #fff;
+}
 
 
 
-h1 {
-            text-align: center;
-            margin: 30px 0;
-        }
+.blog-card-content::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
 
+
+
+.sidebar {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card {
+    /* ... Existing styles ... */
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.blog-intro{
+  color:white;
+  font-size: large;
+  padding:30px;
+  margin-top:20px;
+  text-align: justify;
+}
+
+@media (max-width: 640px) {
+            .navbar-desktop {
+                display: none;
+            }
         
+            .navbar-mobile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: white;
+                height: 60px;
+                padding: 0 12px;
+                border-bottom: 1px solid var(--very-light-pink);
+            }
+        
+            .menu-icon {
+                display: block;
+            }
+        
+            .mobile-menu {
+                display: block;
+            }
+            .blog-posts {
+        justify-content: center; /* Center the cards horizontally */
+        margin-top:50px;
+    }
 
-        h1{
-            color: white;
-            font-size:x-large;
-            font-weight: bold;
-            margin-top: 70px;
+    .blog-card {
+      height:59%; 
+      width: 78%; /* Set the width to 100% to occupy the full screen width */
+   
+    }
+
+    .main {
+      justify-content: center;
+    }
+
+
         }
 
         .dropdown {
@@ -193,212 +324,91 @@ h1 {
 .dropdown:hover .dropdown-content {
   display: block;
 
-    }
+     }
 
-    .blog-section {
-  display: block;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 50px;
-
-gap:40px;
-
-}
-
-.flex-card {
-   width:280px;
-   height:auto; 
-  flex-basis: 30%;
-  margin: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  display: flex;
-  transition: transform 0.3s ease;
-  margin-left:40px;
-}
-
-.flex-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-content {
-  flex-basis: 80%;
-}
-
-.card-image {
-  flex-basis: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-image img {
-width:240px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-h3 {
-  margin: 0 0 10px;
-  color: #007bff;
-}
-
-p {
-  margin: 0;
-  color: #444;
-}
-
-button.see-blog-btn {
-  margin-top: 10px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button.see-blog-btn:hover {
-  background-color: #0056b3;
-}
-        
-
-        @media (max-width: 768px) {
-
-        }
-        
-        @media (max-width: 640px) {
-            .navbar-desktop {
-                display: none;
-            }
-
-               
-           
-        
-
-             
-        
-            .navbar-mobile {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                background-color: white;
-                height: 60px;
-                padding: 0 12px;
-                border-bottom: 1px solid var(--very-light-pink);
-            }
-        
-            .menu-icon {
-                display: block;
-            }
-        
-            .mobile-menu {
-                display: block;
-            }
-        }
 </style>
-
 <body>
+ <!-- Desktop Navbar -->
+ <nav class="navbar-desktop">
+  <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
+  <div class="nav-items-desktop">
+    <a href="index.html">Home</a>
+    <a href="cursos.html">Courses</a>
+    <a href="blog.html">Blogs</a>
+    <a href="proyectos.html">Projects</a>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Collaborate </a>
+      <div class="dropdown-content">
+      <a href="colaborar.html">Collaborate</a>  
+        <a href="empresas.html">Companies that collaborate</a>
+        <a href="personas_apoyan.html">people who support</a>
+      </div>
+    </li>
+    <a href="unete.html" >Join</a>
+    <a href="contacto.html">Contact</a>
     
-     <!-- Desktop Navbar -->
-  <nav class="navbar-desktop">
-    <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="logo">
-    <div class="nav-items-desktop">
-      <a href="index.html">Home</a>
-      <a href="cursos.html">Courses</a>
-      <a href="team.html">Team</a>
-      <a href="proyectos.html">Projects</a>
+    
+
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="navbar-mobile">
+  <div class="menu-icon">
+    <img src="iconos/icon_menu.svg" alt="Menu Icon">
+  </div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cursos.html">Courses</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+      <li><a href="proyectos.html">Projects</a></li>
       <li class="dropdown">
         <a href="#" class="dropbtn">Collaborate </a>
         <div class="dropdown-content">
         <a href="colaborar.html">Collaborate</a>  
           <a href="empresas.html">Companies that collaborate</a>
-          <a href="personas_apoyan.html">people who support</a>
+          <a href="personas_apoyan.html">People who support</a>
         </div>
       </li>
-      <a href="unete.html" >Join</a>
-      <a href="contacto.html">Contact</a>
+      <li><a href="unete.html">Join</a></li>
+      <li><a href="contacto.html">Contact</a></li>
       
-      
+    </ul>
+    <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
+  </div>
+</nav>
+<h1 class="title">Blogs</h1>
+<p class="blog-intro"> In this section we post space related blogs, we upload latest space news and astronomy concepts. If you want to join as a blog writer, go into the join section, to be a Space Engagement Officer. Enjoy learning about space!</p>
+    <main>
+        <section class="blog-posts">
+            <article class="blog-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Keplers_supernova.jpg/640px-Keplers_supernova.jpg" alt="Blog 1">
+                <h2>Supernova</h2>
+                <p>In this blog you will learn about supernova, explosion of a star. This concept will be explained by Priyansh Shukla. </p>
+                <a href="en_curso.html">Read more</a>
+            </article>
 
-    </div>
-  </nav>
+            <article class="blog-card">
+                <img src="https://live-production.wcms.abc-cdn.net.au/9485491297b12c2461e5d4261d66278b?impolicy=wcms_crop_resize&cropH=2985&cropW=4477&xPos=515&yPos=543&width=862&height=575" alt="Blog 2">
+                <h2>Black Hole</h2>
+                <p>In this wonderful blog, you will learn about a black hole, and its creation. Black hole has a massive gravitational attraction.</p>
+                <a href="en_curso.html">Read more</a>
+            </article>
 
-  <!-- Mobile Menu -->
-  <nav class="navbar-mobile">
-    <div class="menu-icon">
-      <img src="iconos/icon_menu.svg" alt="Menu Icon">
-    </div>
-    <div class="mobile-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cursos.html">Courses</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="proyectos.html">Projects</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Collaborate </a>
-          <div class="dropdown-content">
-          <a href="colaborar.html">Collaborate</a>  
-            <a href="empresas.html">Companies that collaborate</a>
-            <a href="personas_apoyan.html">People who support</a>
-          </div>
-        </li>
-        <li><a href="unete.html">Join</a></li>
-        <li><a href="contacto.html">Contact</a></li>
-        
-      </ul>
-      <img src="conceptos-imagenes/Tech Space (2) (2).png" alt="Logo" class="mobile-menu-logo">
-    </div>
-  </nav>
+            <!-- Add more blog cards here -->
+        </section>
 
-  <section class="blog-section">
-    <div class="flex-card">
-      <div class="card-content">
-        <h3>Blog Title 1</h3>
-        <p>Short description of the blog content. This is a sample blog description to show how it will look.</p>
-        <button class="see-blog-btn" onclick="window.location.href='link_to_blog1.html'">See Blog</button>
-      </div>
-      <div class="card-image">
-        <img src="image_url_1.jpg" alt="Blog 1 Image">
-      </div>
-    </div>
-
-    <div class="flex-card">
-      <div class="card-content">
-        <h3>Blog Title 2</h3>
-        <p>Short description of the blog content. This is another sample blog description to demonstrate the layout.</p>
-        <button class="see-blog-btn" onclick="window.location.href='link_to_blog2.html'">See Blog</button>
-      </div>
-      <div class="card-image">
-        <img src="conceptos-imagenes/alta_energia.jpg" alt="Blog 2 Image">
-      </div>
-    </div>
-
-    <!-- Add more flex cards for other blogs as needed -->
-  </section>
-    
-    
-
-        
-   
+    </main>
 
     <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navbarMobile = document.querySelector('.navbar-mobile');
-        const mobileMenu = document.querySelector('.mobile-menu');
-    
-        menuIcon.addEventListener('click', () => {
-            navbarMobile.classList.toggle('menu-open');
-        });
-    </script>
-    <section class="main-container">
-        <div class="card-container">
-           
-
-
+      const menuIcon = document.querySelector('.menu-icon');
+      const navbarMobile = document.querySelector('.navbar-mobile');
+      const mobileMenu = document.querySelector('.mobile-menu');
+  
+      menuIcon.addEventListener('click', () => {
+          navbarMobile.classList.toggle('menu-open');
+      });
+  </script>
 </body>
-    
+</html>
