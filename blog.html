@@ -141,62 +141,7 @@
             font-family: Arial, sans-serif;
             
         }
-        .apoyo-container {
-            text-align: center;
-            margin: 20px;
-            
-            
-            
-        }
-        .apoyo-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .apoyo-description {
-            font-size: 16px;
-            color: white;
-            text-align:justify;
-            padding:40px;
-            font-size: large;
-            font-family: 'Quicksand', sans-serif;
-            white-space: normal;
-        }
-        .apoyo-card {
-            border: 2px solid black;
-            border-radius: 20px;
-            padding: 10px;
-            margin: 10px;
-            display: inline-block;
-            text-align: center;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-            color: white;
-            background-color: white;
-            object-fit: cover;
-            margin-top: 50px;
-            margin-bottom: 40px;
-            gap: 50px;
-        }
-        .apoyo-card:hover {
-            transform: scale(1.1);
-        }
-        .apoyo-name {
-            font-size: 20px;
-            font-weight: bold;
-            color:black;
-        }
-
-        .apoyo-job{
-            color: black;
-        }
-        .apoyo-image {
-            width: 170px;
-            height: 170px;
-            border-radius:  50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-            
-        }
+       
 
 
 
@@ -205,67 +150,7 @@ h1 {
             margin: 30px 0;
         }
 
-        .project-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            
-        }
-
-        .project-article {
-            flex: 0 0 calc(33.33% - 20px);
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 25px;
-            
-        }
-
-        .project-article img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px 5px 0 0;
-        }
-
-        .project-article-content {
-            padding: 15px;
-        }
-
-        .project-article-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .project-article-description {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .project-article-read-more {
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .project-article-read-more:hover {
-            background-color: #0056b3;
-        }
-
-        .project-article:hover {
-            transform: translateY(-5px);
-        }
+        
 
         h1{
             color: white;
@@ -309,6 +194,77 @@ h1 {
   display: block;
 
     }
+
+    .blog-section {
+  display: block;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 50px;
+
+gap:40px;
+
+}
+
+.flex-card {
+   width:280px;
+   height:auto; 
+  flex-basis: 30%;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  transition: transform 0.3s ease;
+  margin-left:40px;
+}
+
+.flex-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  flex-basis: 80%;
+}
+
+.card-image {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+width:240px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #007bff;
+}
+
+p {
+  margin: 0;
+  color: #444;
+}
+
+button.see-blog-btn {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.see-blog-btn:hover {
+  background-color: #0056b3;
+}
         
 
         @media (max-width: 768px) {
@@ -399,26 +355,32 @@ h1 {
     </div>
   </nav>
 
-    <div class="apoyo-container">
-        <h1 class="apoyo-title">People who support </h1>
-        <p class="apoyo-description">On our exciting journey, we have the support and motivation of these committed people. His deep interest in our projects is a constant source of inspiration for our entire team. </p>
-        <a href="https://www.linkedin.com/in/daniel-herrera-cardona/" target="_blank" class="apoyo-card">
-            <img class="apoyo-image" src="https://media.licdn.com/dms/image/D4D03AQHl6L7FMmLGzw/profile-displayphoto-shrink_800_800/0/1681238911272?e=1695859200&v=beta&t=YdowfzmAtvKnyZfQMLxpZyIFeKQ6CYMIsHi6_-PZ47E" alt="Imagen de perfil 1">
-            <p class="apoyo-name">Daniel Herrera Cardona</p>
-            <p class="apoyo-job">Nuclear and Plasma Physics Student</p>
-        </a>
-        <a href="https://www.linkedin.com/in/remcotimmermans/" target="_blank" class="apoyo-card">
-            <img class="apoyo-image" src="https://pbs.twimg.com/profile_images/1219205078554497024/MHBeaclE_400x400.jpg">
-            <p class="apoyo-name">Remco Timmermans </p>
-            <p class="apoyo-job">Social media specialist for space</p>
-        </a>
-        <a href="https://www.linkedin.com/in/alina-vizireanu/" target="_blank" class="apoyo-card">
-            <img class="apoyo-image" src="https://media.licdn.com/dms/image/C4E03AQFKkHaGG1RmBw/profile-displayphoto-shrink_800_800/0/1652316559142?e=1697068800&v=beta&t=HbDhLLFiZAVNQW7BMCt5YmFgOGC5qcaNOVnq6Zm0mgE">
-            <p class="apoyo-name">Alina Vizireanu </p>
-            <p class="apoyo-job">Consultant for Space Education projects</p>
-        </a>
-      
+  <section class="blog-section">
+    <div class="flex-card">
+      <div class="card-content">
+        <h3>Blog Title 1</h3>
+        <p>Short description of the blog content. This is a sample blog description to show how it will look.</p>
+        <button class="see-blog-btn" onclick="window.location.href='link_to_blog1.html'">See Blog</button>
+      </div>
+      <div class="card-image">
+        <img src="image_url_1.jpg" alt="Blog 1 Image">
+      </div>
     </div>
+
+    <div class="flex-card">
+      <div class="card-content">
+        <h3>Blog Title 2</h3>
+        <p>Short description of the blog content. This is another sample blog description to demonstrate the layout.</p>
+        <button class="see-blog-btn" onclick="window.location.href='link_to_blog2.html'">See Blog</button>
+      </div>
+      <div class="card-image">
+        <img src="conceptos-imagenes/alta_energia.jpg" alt="Blog 2 Image">
+      </div>
+    </div>
+
+    <!-- Add more flex cards for other blogs as needed -->
+  </section>
+    
     
 
         
