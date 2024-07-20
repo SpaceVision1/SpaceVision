@@ -31,8 +31,10 @@
     .main-container {
       width:100%;
       height: auto;
-      border-bottom: 7px solid darkblue; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
-  padding-bottom: 10px;
+  
+  background-image: url(conceptos-imagenes/earth.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+    background-position: center;
     }
 
    
@@ -226,6 +228,66 @@
   margin: 20px;
   transition: opacity 0.3s;
   
+}
+
+.colaboradores {
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .social-icon img:hover {
@@ -585,60 +647,33 @@
 <section class="resumen">
   <h1>Space Vision</h1>
         
-        <p>  At Space Vision, we inspire people about space, creating space-related projects and offering captivating astronomy and astrophysics courses. We invite all space enthusiasts to join Space Vision community where we provide amazing opportunitites. Our mission is to inspire people about space worldwide by providing the best space education. </p>
+        <p>  At Space Vision, we inspire people about space, creating space-related projects and offering amazing space content. We invite all space enthusiasts to join Space Vision community where we provide amazing opportunitites. </p>
         <img src="conceptos-imagenes/Space Vision logo real.png" >
 
         
 </section>
-<h2 class="cursos">Courses</h2>
-<h3>After completing the course and passing the exam you will get a free certificate</h3>
 <section class="main-container">
-  <div class="card-container">
+  <h2 class="cursos">Collaborators</h2>
+  <div class="colaboradores" >
+    <div class="carousel">
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-track-container">
+            <ul class="carousel-track">
+                <li class="carousel-slide"><a href="https://www.kreiosspace.com/" target="_blank"><img src="conceptos-imagenes/logo_kreios.jpeg" alt="Colaborador 1"></a></li>
+                <li class="carousel-slide"><a href="https://starlabsurat.com/" target="_blank"><img src="conceptos-imagenes/logo STAR.png" alt="Colaborador 2"></a></li>
+                <li class="carousel-slide"><a href="https://www.involvespace.eu/" target="_blank"><img src="conceptos-imagenes/involve space.png" alt="Colaborador 3"></a></li>
+                <li class="carousel-slide"><a href="https://theinspired24.com/" target="_blank"><img src="conceptos-imagenes/inspired24.webp" alt="Colaborador 3"></a></li>
+                <li class="carousel-slide"><a href="https://www.orbital-space.com/" target="_blank"><img src="conceptos-imagenes/Orbital space logo.png" alt="Colaborador 3"></a></li>
+                <li class="carousel-slide"><a href="https://www.forallmoonkind.org/" target="_blank"><img src="conceptos-imagenes/For all moonkind logo.jpg" alt="Colaborador 3"></a></li>
+                <li class="carousel-slide"><a href="https://uvigoaerotech.com/" target="_blank"><img src="conceptos-imagenes/UVigoAerotech_logo_color-300x300.jpg" alt="Colaborador 3"></a></li>
 
-    <!-- Curso 1 -->
-    <a href="introduction.html" class="product-card" target="_blank">
-      <img src="https://images.pexels.com/photos/17505904/pexels-photo-17505904/free-photo-of-nebulosa-m78.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-      <div class="product-info">
-        <div>
-          <p>Introduction to astronomy</p>
-          <p>starter course</p>
+                <li class="carousel-slide"><a href="https://www.sustainaverseweb.com/" target="_blank"><img src="conceptos-imagenes/Sustainaverse logo.png" alt="Colaborador 3"></a></li>
+                <!-- Añadir más imágenes según sea necesario -->
+            </ul>
         </div>
-        <figure>
-          <img src="conceptos-imagenes/Space Vision logo real.png" alt="">
-        </figure>
-      </div>
-    </a>
-
-    <!-- Curso 2 -->
-    <a href="en_curso.html" class="product-card" target="_blank">
-      <img src="https://www.juntadeandalucia.es/presidencia/portavoz/resources/files/2023/2/16/1676563269791Astrofisica_Est.jpg" alt="">
-      <div class="product-info">
-        <div>
-          <p>Introducción to astrophysics</p>
-          <p>starter course</p>
-        </div>
-        <figure>
-          <img src="conceptos-imagenes/Space Vision logo real.png" alt="">
-        </figure>
-      </div>
-    </a>
-
-    <!-- Curso 3 -->
-    <a href="en_curso.html" class="product-card" target="_blank">
-      <img src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/07/26/5fa52c231096a.jpeg" alt="">
-      <div class="product-info">
-        <div>
-          <p>General and special theory of relativity</p>
-          <p>Advanced course</p>
-        </div>
-        <figure>
-          <img src="conceptos-imagenes/Space Vision logo real.png" alt="">
-        </figure>
-      </div>
-    </a>
-
-    <!-- Agrega más cursos con la estructura de la tarjeta de arriba -->
-  </div>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
 </section>
 <section class="chatbot">
   <h1>Join us</h1>
@@ -718,7 +753,30 @@
     });
   });
 </script>
+<script>
+let slideIndex = 0;
 
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const track = document.querySelector('.carousel-track');
+    slideIndex += direction;
+
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    } else if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
+    const slideWidth = slides[0].offsetWidth;
+    const newPosition = -slideIndex * slideWidth;
+    track.style.transform = `translateX(${newPosition}px)`;
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+    moveSlide(1);
+}, 3500);
+</script>
 
     
   <script>
